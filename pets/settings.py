@@ -48,6 +48,11 @@ STATICFILES_FINDERS = (
     'djangobower.finders.BowerFinder',
 )
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'pets/templates'),
+    os.path.join(BASE_DIR, 'reports/templates'),
+)
+
 STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
