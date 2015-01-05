@@ -2,9 +2,11 @@ __author__ = 'fredericomatos'
 
 import requests
 from django.conf import settings
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render_to_response
 
 
+@staff_member_required
 def report_pets_by_tags(request):
     url = 'https://api.instagram.com/v1/tags/bichosdeestimacao/media/recent'
     params = {'access_token': settings.ACCESS_TOKEN}

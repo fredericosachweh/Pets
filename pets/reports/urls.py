@@ -1,6 +1,4 @@
-from django.conf.urls import patterns, include, url
-from django.contrib import admin
-from django.contrib.auth.decorators import login_required
+from django.conf.urls import patterns, url
 from pets.reports import views
 
 urlpatterns = patterns('',
@@ -8,5 +6,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'pets.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^report-pets-by-tags/', login_required(views.report_pets_by_tags)),
+    url(r'^report-pets-by-tags/', views.report_pets_by_tags),
 )
